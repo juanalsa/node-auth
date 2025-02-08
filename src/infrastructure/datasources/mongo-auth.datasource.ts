@@ -36,7 +36,6 @@ export class MongoAuthDatasource implements AuthDatasource {
       await user.save();
 
       // 3. Mapear la respuesta a nuestra entidad
-      // TODO: Falta un mapper
       return UserMapper.userEntityFromObject(user);
     } catch (error) {
       if (error instanceof CustomError) {
